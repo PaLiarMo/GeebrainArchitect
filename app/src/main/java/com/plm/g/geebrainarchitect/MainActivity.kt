@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.plm.g.geebrainarchitect.R
 import com.plm.g.geebrainarchitect.R.layout.activity_main
 
 
@@ -28,13 +27,16 @@ class MainActivity : AppCompatActivity(activity_main), MainView {
         btn_counter3.setOnClickListener(listener)
     }
 
-    //Подсказка к ПЗ: поделить на 3 отдельные функции и избавиться от index
-    override fun setButtonText(index: Int, text: String) {
-        when(index){
-            0 -> btn_counter1.text = text
-            1 -> btn_counter2.text = text
-            2 -> btn_counter3.text = text
-        }
+    override fun setCounter1Text(text: String) {
+        btn_counter1.text = text
+    }
+
+    override fun setCounter2Text(text: String) {
+        btn_counter2.text = text
+    }
+
+    override fun setCounter3Text(text: String) {
+        btn_counter3.text = text
     }
 
 }

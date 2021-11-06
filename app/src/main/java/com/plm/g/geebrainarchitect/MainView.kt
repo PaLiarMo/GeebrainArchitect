@@ -1,5 +1,7 @@
 package com.plm.g.geebrainarchitect
 
 interface MainView {
-    fun setButtonText(index: Int, text: String)
+    fun setCounter1Text(text: String)
+    fun setCounter2Text(text: String)
+    fun setCounter3Text(text: String)
 }
